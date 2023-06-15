@@ -9,6 +9,17 @@
   <title>Avineesh Kumar | Portfolio</title>
   <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style-starter.css">
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script src="assets/js/sendEmail.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("cL5A9usIWvsNI-Z04");
+   })();
+</script>
+
 </head>
 
 <body>
@@ -117,21 +128,21 @@
                     </div>
                 </div>
                 <div class="map-content-9">
-                    <form id="gform" action="" method="POST">
+                    <form id="gform" onsubmit="return validateForm()" method="post" >
                         <div class="twice-two">
-                            <input type="text" class="form-control" id="validationServer01" name="name"  placeholder="Name"
+                            <input type="text" class="form-control" id="name" name="name"  placeholder="Name"
                                 required>
-                            <input type="email" class="form-control" name="email" id="w3lSender" placeholder="Email"
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
                                 required>
                         </div>
                         <div class="twice">
-                            <input type="text" class="form-control" name="subject" id="w3lSubject"
+                            <input type="text" class="form-control" name="subject" id="subject"
                                 placeholder="Subject" required>
                         </div>
                         <textarea name="message" class="form-control" id="message" placeholder="Message"
                             required></textarea>
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary btn-style mt-4">Send Message</button>
+                            <button type="submit" class="btn btn-primary btn-style mt-4" >Send Message</button>
                         </div>
                     </form>
                 </div>
